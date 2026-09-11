@@ -9,7 +9,7 @@ Exploratory Data Analysis
 - Outliers: checked using the IQR method. Only Age and Weight flagged a small number of values, both explainable as genuine variation rather than data errors: a wider weight range is expected and meaningful in an obesity dataset. No_of_mainsPerDay, Physicals, and Tech_Usage are ordinal/discrete scales, so IQR-based flags on those columns weren't meaningful and were disregarded. No outliers were removed.
 
 Feature Engineering
-- Created BMI (Weight / Height²), an Unhealthy_Score combining high-calorie food consumption, smoking, family history, and low physical activity into one composite score, an Age_Group bucket (Teen / Young Adult / Adult / Older), a Hydration_per_Meal ratio, an Active_Transport flag for walking/biking, and a Sedentary_Ratio comparing tech usage to physical activity.
+- Created BMI (Weight / Height), an Unhealthy_Score combining high-calorie food consumption, smoking, family history, and low physical activity into one composite score, an Age_Group bucket (Teen / Young Adult / Adult / Older), a Hydration_per_Meal ratio, an Active_Transport flag for walking/biking, and a Sedentary_Ratio comparing tech usage to physical activity.
 
 Preprocessing
 - Categorical columns (including the engineered Age_Group) were one-hot encoded, and the target was encoded with pd.factorize(). Data was split 80/20 with stratification, and numeric features were scaled with StandardScaler, fit on the training set only.
