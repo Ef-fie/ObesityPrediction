@@ -17,11 +17,11 @@ Preprocessing
 
 Models
 - Trained Logistic Regression, Decision Tree, Random Forest, XGBoost, and SVM, then combined the top performers (Random Forest, XGBoost, Decision Tree) into a Stacking Classifier with a Logistic Regression meta-learner.
-- Logistic Regression came in weakest (~91% accuracy),it confirmed the relationship between features and obesity level isn't purely linear. Decision Tree, Random Forest, and XGBoost all performed similarly well, in the 97-98% range. The Stacking Classifier came out on top, at 98.8% test accuracy and 98.2% cross-validation accuracy, with the most balanced performance across all seven classes.
+- Logistic Regression came in weakest (91% accuracy),it confirmed the relationship between features and obesity level isn't purely linear. Decision Tree, Random Forest, and XGBoost all performed similarly well, in the 97-98% range. The Stacking Classifier came out on top, at 98.8% test accuracy and 98.2% cross-validation accuracy, with the most balanced performance across all seven classes.
 - 5-fold cross-validation was run for every model to confirm results were stable and not just a lucky train/test split.
 
 Best Model
-- The Stacking Classifier is the strongest overall — best test accuracy, best macro F1, and consistent performance across all classes. Random Forest came very close on cross-validation accuracy alone, and at a fraction of the computational cost, so it was used for interpretability work instead of the heavier stacked ensemble.
+- The Stacking Classifier is the strongest overall- best test accuracy, best macro F1, and consistent performance across all classes. Random Forest came very close on cross-validation accuracy alone, and at a fraction of the computational cost, so it was used for interpretability work instead of the heavier stacked ensemble.
 - The hardest classes to separate were consistently Obesity_Type_I and Obesity_Type_II, since these are adjacent severity tiers with naturally overlapping feature profiles.
 
 Feature Importance
