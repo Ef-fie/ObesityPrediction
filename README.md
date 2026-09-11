@@ -28,7 +28,7 @@ Feature Importance
 - BMI was by far the strongest predictor, followed by Weight. Frequency of vegetable consumption was a genuinely interesting finding, it barely showed any linear correlation with the target, but ranked as a top driver in feature importance, suggesting a non-linear or interaction effect that tree-based models pick up on but simple correlation misses. Height and Age followed, with the engineered features (Unhealthy_Score, Hydration_per_Meal, Sedentary_Ratio) contributing more modestly.
 
 Limitations
-- BMI and Weight are closely tied to how obesity categories are typically defined, so their dominance as predictors is partly definitional rather than a novel discovery. Adjacent obesity classes remain harder to distinguish, which fits with them sitting close together on a continuous underlying scale. Cross-validation was run on pre-scaled features rather than within a fully leakage-free pipeline — given how well-separated the classes already are, this is expected to have negligible impact on the reported scores.
+- BMI and Weight are closely tied to how obesity categories are typically defined, so their dominance as predictors is partly definitional rather than a novel discovery. Adjacent obesity classes remain harder to distinguish, which fits with them sitting close together on a continuous underlying scale. Cross-validation was run on pre-scaled features rather than within a fully leakage-free pipeline, given how well-separated the classes already are, this is expected to have negligible impact on the reported scores.
 
 Tech Stack
 - Python,numpy, pandas, scikit-learn, XGBoost, seaborn, matplotlib
